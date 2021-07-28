@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 
 const expressLayout = require('express-ejs-layouts')
 
@@ -115,6 +114,5 @@ app.post('/packages', (req, res) => {
 })
 
 
-app.listen(port, () => {
-    console.log(`Server is Running at http://localhost:${port}`)
-})
+
+app.listen(process.env.PORT || 8080)
